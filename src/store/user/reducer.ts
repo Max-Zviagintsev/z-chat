@@ -1,12 +1,15 @@
-import {Reducer} from 'redux'
-import {UserState, SET_USER, CLEAR_USER} from './types'
+import {UserState, SET_USER, CLEAR_USER} from './types';
+import { Action } from "redux";
 
 export const initialState: UserState = {
     currentUser: null,
     isLoading: true
 };
 
-const reducer: Reducer<UserState> = (state = initialState, action) => {
+export function userReducer(
+    state = initialState,
+    action: Action
+): UserState {
     switch (action.type) {
         case SET_USER: {
             return {
@@ -21,10 +24,7 @@ const reducer: Reducer<UserState> = (state = initialState, action) => {
                 isLoading: false
             }
         }
-        default: {
-            return state
-        }
+        default:
+            return state;
     }
-};
-
-export {reducer as userReducer}
+}
