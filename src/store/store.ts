@@ -1,7 +1,7 @@
 import {createStore, combineReducers, applyMiddleware} from "redux";
 import thunkMiddleware from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension";
-import { connectRouter, routerMiddleware } from 'connected-react-router';
+import { RouterState, connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import { History } from 'history';
 
@@ -14,7 +14,10 @@ const rootReducer = (history: History) => combineReducers({
     user: userReducer,
 });
 
-export type RootState = ReturnType<typeof rootReducer>;
+export interface RootState {
+    router: RouterState,
+    user: any
+}
 
 export default function configureStore() {
     const middlewares = [thunkMiddleware, routerMiddleware(history)];

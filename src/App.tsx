@@ -14,6 +14,12 @@ interface OwnProps {
     history: History;
 }
 
+const mapStateToProps = (state: RootState) => ({
+    isLoading: state.user.isLoading
+});
+
+const mapDispatchToProps = {setUser, clearUser};
+
 type Props = OwnProps & ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps;
 
 type State = Readonly<{}>;
@@ -35,12 +41,6 @@ class App extends PureComponent<Props, State> {
         );
     }
 }
-
-const mapStateToProps = (state: RootState) => ({
-    isLoading: state.user.isLoading
-});
-
-const mapDispatchToProps = {setUser, clearUser};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 

@@ -1,5 +1,4 @@
 import {UserState, SET_USER, CLEAR_USER} from './types';
-import { Action } from "redux";
 
 export const initialState: UserState = {
     currentUser: null,
@@ -8,7 +7,7 @@ export const initialState: UserState = {
 
 export function userReducer(
     state = initialState,
-    action: Action
+    action: any//Action
 ): UserState {
     switch (action.type) {
         case SET_USER: {
