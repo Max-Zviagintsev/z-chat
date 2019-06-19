@@ -1,12 +1,22 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { AppState } from "./store/store";
+import { RootState } from "./store/store";
 import ColorPanelComponent from "./components/color_panel/ColorPanelComponent";
 import MessagesComponent from "./components/messages/MessagesComponent";
 import SidePanelComponent from "./components/side_panel/SidePanelComponent";
 import MetaPanelComponent from "./components/meta_panel/MetaPanelComponent";
 
 interface OwnProps {}
+
+const mapStateToProps = (state: RootState) => {
+    return {
+
+    };
+};
+
+const mapDispatchToProps = {
+
+};
 
 type Props = OwnProps & ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps;
 
@@ -26,16 +36,6 @@ class App extends PureComponent<Props, State> {
     );
   }
 }
-
-const mapStateToProps = (state: AppState) => {
-  return {
-
-  };
-};
-
-const mapDispatchToProps = {
-
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
