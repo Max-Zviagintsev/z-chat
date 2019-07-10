@@ -7,7 +7,7 @@ export const initialState: UserState = {
 
 export function userReducer(
     state = initialState,
-    action: any//Action
+    action: any
 ): UserState {
     switch (action.type) {
         case SET_USER: {
