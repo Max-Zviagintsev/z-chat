@@ -6,11 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import 'antd/dist/antd.css';
 import {ThemeProvider} from "styled-components";
 import {theme} from "./shared/theme";
-import configureStore, {history} from './store/store';
-
+import configureStore from './store/store';
+import {createBrowserHistory} from "history";
 import App from './App';
 
-const store = configureStore();
+const history = createBrowserHistory();
+const store = configureStore(history);
 
 ReactDOM.render(
     <Provider store={store}>

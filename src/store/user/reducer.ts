@@ -1,4 +1,4 @@
-import {UserState, SET_USER, CLEAR_USER} from './types';
+import {UserState, UserActionTypes} from './types';
 
 export const initialState: UserState = {
     currentUser: null,
@@ -10,14 +10,14 @@ export function userReducer(
     action: any
 ): UserState {
     switch (action.type) {
-        case SET_USER: {
+        case UserActionTypes.SET_USER: {
             return {
                 ...state,
                 isLoading: false,
                 currentUser: action.payload.currentUser
             }
         }
-        case CLEAR_USER: {
+        case UserActionTypes.CLEAR_USER: {
             return {
                 ...state,
                 isLoading: false

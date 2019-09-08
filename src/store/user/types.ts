@@ -3,5 +3,7 @@ export interface UserState {
     readonly isLoading: boolean
 }
 
-export const SET_USER = 'SET_USER';
-export const CLEAR_USER = 'CLEAR_USER';
+export enum UserActionTypes {
+    SET_USER = 'SET_USER',
+    CLEAR_USER = 'CLEAR_USER'
+}
