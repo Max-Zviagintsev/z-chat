@@ -1,46 +1,31 @@
-import React, {PureComponent} from 'react';
-import {connect} from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import { History } from 'history';
+import React, {FunctionComponent} from 'react';
+import {ConnectedRouter} from 'connected-react-router';
+import {History} from 'history';
 
-import {RootState} from "./store/store";
 import LoginComponent from './components/auth/login/LoginComponent';
 import Register from './components/auth/register/RegisterComponent';
 import HomeComponent from "./components/home/HomeComponent";
 import {setUser, clearUser} from "./store/user/actions";
 import {Route, Switch} from "react-router";
+import {shallowEqual, useSelector} from 'react-redux';
 
-interface OwnProps {
+interface Props {
     history: History;
 }
 
-const mapStateToProps = (state: RootState) => ({
-    isLoading: state.user.isLoading
-});
+export const App: FunctionComponent<Props> = (props) => {
+    const {history}: Props = props;
+    const userSet = useSelector(setUser, shallowEqual);
+    const userClear = useSelector(clearUser, shallowEqual);
 
-const mapDispatchToProps = {setUser, clearUser};
-
-type Props = OwnProps & ReturnType<typeof mapStateToProps> & typeof mapDispatchToProps;
-
-type State = Readonly<{}>;
-
-class App extends PureComponent<Props, State> {
-    readonly state: State = {};
-
-    render() {
-        const {history}: OwnProps = this.props;
-
-        return (
-            <ConnectedRouter history={history}>
-                <Switch>
-                    <Route exact path="/" component={HomeComponent}/>
-                    <Route path="/login" component={LoginComponent}/>
-                    <Route path="/register" component={Register}/>
-                </Switch>
-            </ConnectedRouter>
-        );
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+    return (
+        <ConnectedRouter history={history}>
+            <Switch>
+                <Route exact path="/" component={HomeComponent}/>
+                <Route path="/login" component={LoginComponent}/>
+                <Route path="/register" component={Register}/>
+            </Switch>
+        </ConnectedRouter>
+    )
+};
 

@@ -5,7 +5,7 @@ export const initialState: UserState = {
     isLoading: true
 };
 
-export function userReducer(
+export default function reducer(
     state = initialState,
     action: any
 ): UserState {

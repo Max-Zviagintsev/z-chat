@@ -8,7 +8,7 @@ import {ThemeProvider} from "styled-components";
 import {theme} from "./shared/theme";
 import configureStore from './store/store';
 import {createBrowserHistory} from "history";
-import App from './App';
+import {App} from './App';
 
 const history = createBrowserHistory();
 const store = configureStore(history);

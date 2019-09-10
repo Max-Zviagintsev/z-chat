@@ -4,12 +4,12 @@ import {composeWithDevTools} from "redux-devtools-extension";
 import {RouterState, connectRouter, routerMiddleware} from 'connected-react-router';
 import {all, fork} from 'redux-saga/effects';
 import {History} from 'history';
-import {userReducer} from "./user/reducer";
-import {watchUserActions} from "./user/saga";
+import user from "./user";
+import {watchUserActions} from "./user/operations";
 
 const rootReducer = (history: History) => combineReducers({
     router: connectRouter(history),
-    user: userReducer,
+    user: user,
 });
 
 export interface RootState {

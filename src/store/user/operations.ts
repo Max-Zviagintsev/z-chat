@@ -19,3 +19,8 @@ export function* watchUserActions() {
     yield takeEvery(UserActionTypes.SET_USER, setUser);
     yield takeEvery(UserActionTypes.CLEAR_USER, clearUser);
 }
+
+// export only watcher sagas in one variable
+export const sagas = [
+    watchUserActions
+];

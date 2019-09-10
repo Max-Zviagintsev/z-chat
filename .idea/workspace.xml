@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81396044-2e35-49e9-aed9-57dbeb50517d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/saga.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/user/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/user/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/user/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/operations.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +38,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\server\z-chat\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
@@ -73,8 +69,18 @@
       <workItem from="1567762679744" duration="37000" />
       <workItem from="1567931272833" duration="2044000" />
       <workItem from="1567936253109" duration="1710000" />
-      <workItem from="1567938181185" duration="11850000" />
+      <workItem from="1567938181185" duration="14488000" />
+      <workItem from="1568097733398" duration="690000" />
+      <workItem from="1568144732352" duration="5101000" />
     </task>
+    <task id="LOCAL-00001" summary="Set Up Redux Saga">
+      <created>1567969251135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567969251135</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,5 +98,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Set Up Redux Saga" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set Up Redux Saga" />
   </component>
 </project>
